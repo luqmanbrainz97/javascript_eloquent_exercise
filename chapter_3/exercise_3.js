@@ -17,5 +17,5 @@ function countBs(word) {
 console.log(countBs("BBC"));
 
 // var i = [{ events: 0 }, { events: 1 }, { events: 2 }];
-
+//
 // console.log(i[1]);
