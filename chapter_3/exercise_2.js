@@ -20,7 +20,7 @@ function isEven(number) {
   } else if (number === 1) {
     return false;
   } else if (number < 0) {
-    return null;
+    return;
   }
   return isEven(number - 2);
 }

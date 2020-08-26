@@ -41,33 +41,17 @@ function dominantDirection(text) {
     let script = characterScript(char.codePointAt(0));
     return script ? script.direction : "none";
   }).filter(({ direction }) => direction != "none");
-  //   console.log(scripts);
   let total = scripts.reduce((n, { count }) => n + count, 0);
   if (total == 0) return "No scripts found";
-  //   console.log(scripts);
-
+  let tempdirection = "";
+  let tempcount = 0;
   for (let wscripts of scripts) {
-    let temp = 0;
-    let tempword = "";
-    if (temp < wscripts.count) {
-      temp = wscripts.count;
-      tempword = wscripts.direction;
+    if (tempcount < wscripts.count) {
+      tempcount = wscripts.count;
+      tempdirection = wscripts.direction;
     }
-    return tempword;
   }
-
-  //   return scripts
-  //     .map(({ direction, count }) => {
-  //       //   return `${Math.round((count * 100) / total)}% ${direction}`;
-  //       let temp = 0;
-  //       let tempword = "";
-  //       if (temp < scripts.count) {
-  //         temp = scripts.count;
-  //         tempword = scripts.direction;
-  //       }
-  //       return tempword;
-  //     })
-  //     .join(",");
+  return tempdirection;
 }
 
 console.log(dominantDirection("Hello!"));
