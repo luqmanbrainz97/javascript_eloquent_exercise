@@ -32,7 +32,6 @@ function countBy(items, groupName) {
       counts[known].count++;
     }
   }
-  //   console.log(counts);
   return counts;
 }
 
@@ -59,17 +58,3 @@ console.log(dominantDirection("Hello!"));
 console.log(dominantDirection("Hey, مساء الخير"));
 
 console.log(dominantDirection('英国的狗说"woof", 俄罗斯的狗说"тяв"'));
-// → 61% Han, 22% Latin, 17% Cyrillic
-
-// function characterCount(script) {
-//   return script.ranges.reduce((count, [from, to]) => {
-//     return count + (to - from);
-//   }, 0);
-// }
-
-// console.log(characterCount(SCRIPTS));
-// // console.log(
-// //   SCRIPTS.reduce((a, b) => {
-// //     return characterCount(a) < characterCount(b) ? b : a;
-// //   })
-// // );
