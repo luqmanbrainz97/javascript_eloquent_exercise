@@ -14,3 +14,4 @@ map.prototype = {
 };
 // Fixed the call
 console.log(map.prototype.hasOwnProperty("one"));
+//
